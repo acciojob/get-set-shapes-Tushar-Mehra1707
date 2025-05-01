@@ -1,10 +1,28 @@
-//complete this code
-const rectangle=new rectangle(5,10);
-console.log(rectangle.width);
-console.log(rectangle.height);
-console.log(rectangle.getArea());
-const suquare=new square(7);
-console.log(square.width);
-console.log(square.height);
-console.log(square.getArea());
-console.log(square.getPerimeter());
+class Rectangle {
+    constructor(width, height) {
+        this._width = width;
+        this._height = height;
+    }
+
+    get width() {
+        return this._width;
+    }
+
+    get height() {
+        return this._height;
+    }
+
+    getArea() {
+        return this._width * this._height;
+    }
+}
+
+class Square extends Rectangle {
+    constructor(side) {
+        super(side, side); // Call the Rectangle constructor with side for both width and height
+    }
+
+    getPerimeter() {
+        return 4 * this.width; // Since width and height are the same
+    }
+}
