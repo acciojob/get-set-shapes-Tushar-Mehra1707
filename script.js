@@ -1,49 +1,10 @@
 //complete this code
-// Rectangle class
-class Rectangle {
-  constructor(width, height) {
-    if (width <= 0 || height <= 0) {
-      throw new Error("Width and height must be positive integers.");
-    }
-    this._width = width;
-    this._height = height;
-  }
-
-  // Getter for width
-  get width() {
-    return this._width;
-  }
-
-  // Getter for height
-  get height() {
-    return this._height;
-  }
-
-  // Method to calculate area
-  getArea() {
-    return this._width * this._height;
-  }
-}
-
-// Square class inheriting from Rectangle
-class Square extends Rectangle {
-  constructor(side) {
-    if (side <= 0) {
-      throw new Error("Side must be a positive integer.");
-    }
-    super(side, side); // Set both width and height to side
-  }
-
-  // Method to calculate perimeter
-  getPerimeter() {
-    return 4 * this.width; // or 4 * this._width
-  }
-
-
-class Rectangle {}
-
-class Square extends Animal {}
-
-// Do not change the code below this line
-window.Rectangle = Rectangle;
-window.Square = Square;
+const rectangle=new rectangle(5,10);
+console.log(rectangle.width);
+console.log(rectangle.height);
+console.log(rectangle.getArea());
+const suquare=new square(7);
+console.log(square.width);
+console.log(square.height);
+console.log(square.getArea());
+console.log(square.getPerimeter());
